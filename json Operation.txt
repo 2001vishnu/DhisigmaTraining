@@ -1,4 +1,4 @@
-Profile	page-countryselect-For selecting all Countrynames from tblcountry.
+1)countryselect-For selecting all Countrynames from tblcountry.
 
 request
 {
@@ -14,9 +14,8 @@ response
     "productname": "mobile"
   }
 }
--------------------------------------------------------------------------------------------------
 
-Profile	page-stateselect-For selecting all states from tblState with corresponding countryname
+2)stateselect-For selecting all states from tblState with corresponding countryname
 
 request
 {
@@ -44,9 +43,8 @@ response
     }
   ]
 }
--------------------------------------------------------------------------------------------------
 
-Profile	page-userinsert-To insert values into the table tblusers.
+3)userinsert-To insert values into the table tblusers.
 
 request
 {
@@ -74,9 +72,9 @@ request
 response
 {
   "status": "success"
--------------------------------------------------------------------------------------------------
 
-Profile	page-userduplicatevalidation-To validate whether there is a user duplicate with given username
+
+4)userduplicatevalidation-To validate whether there is a user duplicate with given username
 
 request
 {
@@ -93,9 +91,8 @@ response
     "id": 4
   }
 }
--------------------------------------------------------------------------------------------------
 
-login screen-uservalidation-To validate user with giver username and password.
+5)uservalidation-To validate user with giver username and password.
 
 request
 {
@@ -117,9 +114,8 @@ response
     "txtUserType": "seller"
   }
 }
---------------------------------------------------------------------------------------------------------------------------
 
-productlist page-productselect-To select details of a product from table tblProductCategory and tblproduct.
+6)productselect
 
 request
 {
@@ -134,9 +130,8 @@ response
     "txtProdName":"lux","txtProdPrice":"7676","txtCategoryName":"soap"
   }
 }
----------------------------------------------------------------------------------------------------------------------------
 
-addproduct page-productcategoryselect-To select product category from product category list.
+7)productcategoryselect
 
 request
 {
@@ -152,9 +147,8 @@ response
 	"txtCategoryName":"soap"
   }
 }
----------------------------------------------------------------------------------------------------------------------------
 
-addproduct page-productduplicatevalidation-To validate whether there exist same product name
+8)productduplicatevalidation
 
 request
 {
@@ -174,9 +168,8 @@ response
 "id:"1"
   }
 }
----------------------------------------------------------------------------------------------------------------------------
 
-addproduct page-insertproduct-To add product details into the table tblproduct.
+9)insertproduct
 
 request
 {
@@ -193,9 +186,8 @@ response
 {
   "status": "success"
   }
----------------------------------------------------------------------------------------------------------------------------
   
- productcategory page-insertproductcategory	-TO insert details into table tblProductCategory
+ 10)insertproductcategory
   
   request
 {
@@ -210,9 +202,8 @@ response
 {
   "status": "success"
   }
----------------------------------------------------------------------------------------------------------------------------
   
-addproduct page-duplicatevalidationproductcat-TO validate whether exists a given productcategoryname
+ 11)duplicatevalidationproductcat
   
   request
 {
@@ -229,9 +220,8 @@ response
     "id": 4
   }
 }
----------------------------------------------------------------------------------------------------------------------------
 
-editproduct page-productselectbyid	-To select all details about a product
+12)productselectbyid
 
 request
 {
@@ -250,9 +240,8 @@ response
   "txtProdPrice":213,"txtCategoryName":"soap"
   }
 }
----------------------------------------------------------------------------------------------------------------------------
 
-editproduct	page- To edit product details
+13)updateproduct
 
 request
 {
@@ -270,9 +259,8 @@ response
   "status": "success",
   
   }
----------------------------------------------------------------------------------------------------------------------------
- 
-editproduct page-To a deleteproduct
+  
+14)deleteproduct
 
 request
 {
@@ -289,9 +277,8 @@ response
   "status": "success",
   
   }
----------------------------------------------------------------------------------------------------------------------------
 
-orderlist page-TO select order details from table tblorderhead
+15)selectordersfromhdr
 
 request
 {
@@ -311,9 +298,9 @@ response
   
   }
   }
----------------------------------------------------------------------------------------------------------------------------  
   
- orderlistv page-TO select order details from table tblorderhead and tblorderchild
+  
+  16)selectorderfromhdrandchild
   
   request
 {
@@ -332,9 +319,8 @@ response
 
   }
   }
----------------------------------------------------------------------------------------------------------------------------
   
- profileedit	page- TO select a user by id
+  17)selectuserbyid
   
    request
 {
@@ -353,9 +339,8 @@ response
 
   }
   }
- ---------------------------------------------------------------------------------------------------------------------------
- 
-profileedit	page- TO update user details
+  
+  18)updateuser
   
    request
 {
@@ -374,4 +359,3 @@ response
   "status": "success",
   
   }
-  ---------------------------------------------------------------------------------------------------------------------------

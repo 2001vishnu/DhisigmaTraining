@@ -1,15 +1,11 @@
 
 ----------------------------------------------------------------------------------------------------------------------------------------
-Profile	
+Profile	page-countryselect-For selecting all Countrynames from tblcountry.
 
-1)countryselect-For selecting all Countrynames from tblcountry.
+select id,txtCountryName from tblcountryname;	
+----------------------------------------------------------------------------------------------------------------------------------------
 
-select id,txtCountryName from tblcountryname;
-	
-
-
-2)stateselect-For selecting all states from tblState with corresponding countryname	
-
+Profile	page-stateselect-For selecting all states from tblState with corresponding countryname	
 
 SELECT 
     s.id, s.txtStateName, c.txtCountryName
@@ -19,9 +15,9 @@ FROM
     tblcountry c ON c.id = s.refCountryName
 WHERE
     s.refCountryName = 2;
-	
+------------------------------------------------------------------------------------------------------------------------------------------
 
-3)userinsert-To insert values into the table tblusers.	
+Profile	page-userinsert-To insert values into the table tblusers.	
 	
 	
 INSERT INTO tblusers (txtUsername,txtPassword,txtFirstName,txtLastName,refCountryName,
@@ -29,10 +25,9 @@ refStateName,txtAddress,txtStreet,txtCity,txtPincode,txtPhoneNo,txtWebsite,bIsRe
 dtCreatedOn,dtUpdatedOn,bDeleteFlag)
 VALUES ('vishnu','googi','vishnu','nair',2,3,'sastha','arakuzha','muvattu','686672',
 '9020784039','yahoo@gmail.com','1','2022-03-03','2022-03-03','0');
+-------------------------------------------------------------------------------------------------------------------------------------------
 
-
-
-4)userduplicatevalidation-To validate whether there is a user duplicate with given username
+Profile	page-userduplicatevalidation-To validate whether there is a user duplicate with given username
 
 	SELECT 
     id
@@ -40,15 +35,9 @@ FROM
     tblusers
 WHERE
     txtUsername = 'hsgdhd';
-	
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 
-login screen
-
-
-
-
-1)uservalidation-To validate user with giver username and password.
+login screen-uservalidation-To validate user with giver username and password.
 	
 	SELECT 
     u.txtUsername,
@@ -63,16 +52,9 @@ FROM
 WHERE
     u.txtUsername = 'vishnu'
         AND u.txtPassword = 'googi';
-
-
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 
-
-productlist
-
-
-
-1)productselect	-To select details of a product from table tblProductCategory and tblproduct.
+productlist page-productselect-To select details of a product from table tblProductCategory and tblproduct.
 
 	
 	SELECT 
@@ -81,23 +63,18 @@ FROM
     tblproduct u
         JOIN
     tblproductcategory t ON u.refProdCategory = t.id;
-
-
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
 
-addproduct
-
-
-
-1)productcategoryselect-To select product category from product category list.
+addproduct page-productcategoryselect-To select product category from product category list.
 
 
 	SELECT 
     id, txtCategoryName
 FROM
-    tblproductcategory;
+    tblproductcategory
+----------------------------------------------------------------------------------------------------------------------------------------------------------
 
-2)productduplicatevalidation-To validate whether there exist same product name
+addproduct page-productduplicatevalidation-To validate whether there exist same product name
 
 	SELECT 
     id
@@ -105,26 +82,21 @@ FROM
     tblproduct
 WHERE
     txtProdName = 'mobile';
-
-
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
 	
-3)insertproduct-To add product details into the table tblproduct.
+addproduct page-insertproduct-To add product details into the table tblproduct.
 
 	INSERT INTO tblproduct (txtProdName,txtProdPrice,refProdCategory)
 VALUES ('printer','15000','1');
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-
--------------------------------------------------------------------------------------------------------------------------
-
-productcategory
-
-
-1)insertproductcategory	-TO insert details into table tblProductCategory
+productcategory-insertproductcategory	-TO insert details into table tblProductCategory
 
 INSERT INTO tblProductCategory (txtCategoryName)
 VALUES ('groceries');
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-2)duplicatevalidationproductcat-TO validate whether exists a given productcategoryname
+addproduct page-duplicatevalidationproductcat-TO validate whether exists a given productcategoryname
 
 	SELECT 
     id
@@ -132,12 +104,9 @@ FROM
     tblproductcategory
 WHERE
     txtCategoryName = 'electronics';
-
 -------------------------------------------------------------------------------------------------------------------------------
 
-editproduct	
-
-1)productselectbyid	-To select all details about a product
+editproduct page-productselectbyid	-To select all details about a product
 
 SELECT 
     s.id, s.txtProdName, s.txtProdPrice, c.txtCategoryName
@@ -147,64 +116,49 @@ FROM
     tblproductcategory c ON c.id = s.refProdCategory
 WHERE
     s.refProdCategory = 1;
-	
-	
 ---------------------------------------------------------------------------------------------------------------------------------------
 
-
-
-editproduct	
+editproduct	page- To edit product details
 
 updateproduct
 
-	"UPDATE tblproduct
+UPDATE tblproduct
 SET txtProdName='lux',txtProdPrice='65765'
-WHERE id=1;"
+WHERE id=1;
+------------------------------------------------------------------------------------------------------------------------------------------
 
+editproduct page-To a deleteproduct
 
-
-editproduct
-
-	deleteproduct
-
-	"UPDATE tblproduct
+UPDATE tblproduct
 SET bDeleteFlag = 1
-WHERE id=3;"
+WHERE id=3;
+-------------------------------------------------------------------------------------------------------------------------------------------
 
+orderlist page-TO select order details from table tblorderhead
 
-
-orderlist
-
-	selectordersfromhdr	"select  t.id,u.txtUsername,t.txtOrderNo,t.txtOrderAmount,u.txtAddress,
+select  t.id,u.txtUsername,t.txtOrderNo,t.txtOrderAmount,u.txtAddress,
 u.txtPincode from tblorderhead t join tblusers u on t.refUserName=u.id
-where t.id=1;"
+where t.id=1;
+---------------------------------------------------------------------------------------------------------------------------------------------
 
+orderlistv page-TO select order details from table tblorderhead and tblorderchild
 
-orderdetails
-
-	selectorderfromhdrandchild	"select  t.id,t.txtOrderNo,t.txtOrderAmount,u.txtQuantity,u.txtTotalAmount 
+select  t.id,t.txtOrderNo,t.txtOrderAmount,u.txtQuantity,u.txtTotalAmount 
 from tblorderhead t join tblorderchild u on t.id=u.refOrderHdr
-where t.id=1;"
+where t.id=1;
+----------------------------------------------------------------------------------------------------------------------------------------------
 
+profileedit	page- TO select a user by id.
 
+select id,refUserType,txtUsername,txtPassword,txtFirstName from tblusers
+where id=1;
+-----------------------------------------------------------------------------------------------------------------------------------------------
 
-profileedit	
+profileedit	page- TO update user details
 
-
-
-selectuserbyid	
-
-"select id,refUserType,txtUsername,txtPassword,txtFirstName from tblusers
-where id=1;"
-
-
-
-profileedit	
-
-updateuser
-
-	"UPDATE tblusers
+UPDATE tblusers
 SET txtUsername = 'hsgdhd',txtPassword='gvghg',txtFirstName='dhdh',
 txtLastName='dndnd',txtAddress='arakuzha',txtStreet='memadangu',txtCity='kochi',
 txtPincode='676676',txtPhoneNo='448758947',txtWebsite='hhfjd.com'
-WHERE id=1;"
+WHERE id=1;
+-------------------------------------------------------------------------------------------------------------------------------------------------
