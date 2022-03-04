@@ -1,11 +1,11 @@
-Profile	page-countryselect-For selecting all Countrynames from tblcountry.
+Profile	page-For selecting all Countrynames from tblcountry.
 
-request
+Request:-
 {
 "task":"countryselect"
 }
 
-response
+Response:-
 {
   "status": "success",
   "values": 
@@ -16,14 +16,14 @@ response
 }
 -------------------------------------------------------------------------------------------------
 
-Profile	page-stateselect-For selecting all states from tblState with corresponding countryname
+Profile	page-For selecting all states from tblState with corresponding countryname
 
-request
+Request:-
 {
 "task":"stateselect"
 }
 
-response
+Response:-
 {
   "status": "success",
   "values": [
@@ -46,9 +46,9 @@ response
 }
 -------------------------------------------------------------------------------------------------
 
-Profile	page-userinsert-To insert values into the table tblusers.
+Profile	page-To insert values into the table tblusers.
 
-request
+Request:-
 {
  "task":"userinsert",
   "values": {
@@ -71,14 +71,14 @@ request
   }
 }
 
-response
+Response:-
 {
   "status": "success"
 -------------------------------------------------------------------------------------------------
 
-Profile	page-userduplicatevalidation-To validate whether there is a user duplicate with given username
+Profile	page-To validate whether there is a user duplicate with given username
 
-request
+Request:-
 {
 "task":"userduplicatevalidation",
   "values": {
@@ -86,7 +86,7 @@ request
   }
 }
 
-response
+Response:-
 {
   "status": "duplicate exist",
   "values": {
@@ -95,9 +95,9 @@ response
 }
 -------------------------------------------------------------------------------------------------
 
-login screen-uservalidation-To validate user with giver username and password.
+login screen-To validate user with giver username and password.
 
-request
+Request:-
 {
 "task":"uservalidation",
   "values": {
@@ -106,7 +106,7 @@ request
   }
 }
 
-response
+Response:-
 {
   "status": "success",
   "values": {
@@ -119,14 +119,14 @@ response
 }
 --------------------------------------------------------------------------------------------------------------------------
 
-productlist page-productselect-To select details of a product from table tblProductCategory and tblproduct.
+productlist page-To select details of a product from table tblProductCategory and tblproduct.
 
-request
+Request:-
 {
 "task":"productselect"
 }
 
-response
+Response:-
 {
   "status": "success",
   "values":
@@ -136,14 +136,14 @@ response
 }
 ---------------------------------------------------------------------------------------------------------------------------
 
-addproduct page-productcategoryselect-To select product category from product category list.
+addproduct page-To select product category from product category list.
 
-request
+Request:-
 {
 "task":"productcategoryselect"
 }
 
-response
+Response:-
 {
   "status": "success",
   "values":
@@ -154,9 +154,9 @@ response
 }
 ---------------------------------------------------------------------------------------------------------------------------
 
-addproduct page-productduplicatevalidation-To validate whether there exist same product name
+addproduct page-To validate whether there exist same product name
 
-request
+Request:-
 {
 "task":"productduplicatevalidation",
 "values":
@@ -166,7 +166,7 @@ request
   }
 
 
-response
+Response:-
 {
   "status": "success",
   "values":
@@ -176,9 +176,9 @@ response
 }
 ---------------------------------------------------------------------------------------------------------------------------
 
-addproduct page-insertproduct-To add product details into the table tblproduct.
+addproduct page-To add product details into the table tblproduct.
 
-request
+Request:-
 {
 "task":"insertproduct",
   "values": {
@@ -189,15 +189,15 @@ request
 }
 
 
-response
+Response:-
 {
   "status": "success"
   }
 ---------------------------------------------------------------------------------------------------------------------------
   
- productcategory page-insertproductcategory	-TO insert details into table tblProductCategory
+ productcategory page-TO insert details into table tblProductCategory
   
-  request
+Request:-
 {
 "task":"insertproductcategory",
   "values": {
@@ -206,15 +206,15 @@ response
 }
 
 
-response
+Response:-
 {
   "status": "success"
   }
 ---------------------------------------------------------------------------------------------------------------------------
   
-addproduct page-duplicatevalidationproductcat-TO validate whether exists a given productcategoryname
+addproduct page-TO validate whether exists a given productcategoryname
   
-  request
+Request:-
 {
 "task":"duplicatevalidationproductcat",
   "values": {
@@ -222,7 +222,7 @@ addproduct page-duplicatevalidationproductcat-TO validate whether exists a given
   }
 }
 
-response
+Response:-
 {
   "status": "duplicate exist",
   "values": {
@@ -231,9 +231,9 @@ response
 }
 ---------------------------------------------------------------------------------------------------------------------------
 
-editproduct page-productselectbyid	-To select all details about a product
+editproduct page-To select all details about a product
 
-request
+Request:-
 {
 "task":"productselectbyid",
   "values": {
@@ -242,7 +242,7 @@ request
 }
 
 
-response
+Response:-
 {
   "status": "success",
   "values":{
@@ -254,7 +254,7 @@ response
 
 editproduct	page- To edit product details
 
-request
+Request:-
 {
 "task":"updateproduct",
   "values": {
@@ -265,7 +265,7 @@ request
 }
 
 
-response
+Response:-
 {
   "status": "success",
   
@@ -274,7 +274,7 @@ response
  
 editproduct page-To a deleteproduct
 
-request
+Request:-
 {
 "task":"deleteproduct",
   "values": {
@@ -284,7 +284,7 @@ request
 }
 
 
-response
+Response:-
 {
   "status": "success",
   
@@ -293,7 +293,7 @@ response
 
 orderlist page-TO select order details from table tblorderhead
 
-request
+Request:-
 {
 "task":"selectordersfromhdr",
   "values": {
@@ -302,7 +302,7 @@ request
 }
 
 
-response
+Response:-
 {
   "status": "success",
   "values":{
@@ -315,7 +315,7 @@ response
   
  orderlistv page-TO select order details from table tblorderhead and tblorderchild
   
-  request
+Request:-
 {
 "task":"selectorderfromhdrandchild",
   "values": {
@@ -324,7 +324,7 @@ response
 }
 
 
-response
+Response:-
 {
   "status": "success",
   "values":{
@@ -336,7 +336,7 @@ response
   
  profileedit	page- TO select a user by id
   
-   request
+Request:-
 {
 "task":"selectuserbyid",
   "values": {
@@ -345,7 +345,7 @@ response
 }
 
 
-response
+Response:-
 {
   "status": "success",
   "values":{
@@ -357,7 +357,7 @@ response
  
 profileedit	page- TO update user details
   
-   request
+Request:-
 {
 "task":"updateuser",
   "values": {
@@ -369,9 +369,9 @@ profileedit	page- TO update user details
 }
 
 
-response
+Response:-
 {
-  "status": "success",
-  
+  "status": "success"
+
   }
   ---------------------------------------------------------------------------------------------------------------------------
