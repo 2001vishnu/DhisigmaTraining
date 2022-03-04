@@ -1,0 +1,210 @@
+
+----------------------------------------------------------------------------------------------------------------------------------------
+Profile	
+
+1)countryselect-For selecting all Countrynames from tblcountry.
+
+select id,txtCountryName from tblcountryname;
+	
+
+
+2)stateselect-For selecting all states from tblState with corresponding countryname	
+
+
+SELECT 
+    s.id, s.txtStateName, c.txtCountryName
+FROM
+    tblState s
+        JOIN
+    tblcountry c ON c.id = s.refCountryName
+WHERE
+    s.refCountryName = 2;
+	
+
+3)userinsert-To insert values into the table tblusers.	
+	
+	
+INSERT INTO tblusers (txtUsername,txtPassword,txtFirstName,txtLastName,refCountryName,
+refStateName,txtAddress,txtStreet,txtCity,txtPincode,txtPhoneNo,txtWebsite,bIsRegirtered,
+dtCreatedOn,dtUpdatedOn,bDeleteFlag)
+VALUES ('vishnu','googi','vishnu','nair',2,3,'sastha','arakuzha','muvattu','686672',
+'9020784039','yahoo@gmail.com','1','2022-03-03','2022-03-03','0');
+
+
+
+4)userduplicatevalidation-To validate whether there is a user duplicate with given username
+
+	SELECT 
+    id
+FROM
+    tblusers
+WHERE
+    txtUsername = 'hsgdhd';
+	
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+login screen
+
+
+
+
+1)uservalidation-To validate user with giver username and password.
+	
+	SELECT 
+    u.txtUsername,
+    u.txtPassword,
+    u.txtFirstName,
+    u.txtLastName,
+    t.txtUserType
+FROM
+    tblusers u
+        JOIN
+    tblusertype t ON u.refUserType = t.id
+WHERE
+    u.txtUsername = 'vishnu'
+        AND u.txtPassword = 'googi';
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+productlist
+
+
+
+1)productselect	-To select details of a product from table tblProductCategory and tblproduct.
+
+	
+	SELECT 
+    u.txtProdName, u.txtProdPrice, t.txtCategoryName
+FROM
+    tblproduct u
+        JOIN
+    tblproductcategory t ON u.refProdCategory = t.id;
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+addproduct
+
+
+
+1)productcategoryselect-To select product category from product category list.
+
+
+	SELECT 
+    id, txtCategoryName
+FROM
+    tblproductcategory;
+
+2)productduplicatevalidation-To validate whether there exist same product name
+
+	SELECT 
+    id
+FROM
+    tblproduct
+WHERE
+    txtProdName = 'mobile';
+
+
+	
+3)insertproduct-To add product details into the table tblproduct.
+
+	INSERT INTO tblproduct (txtProdName,txtProdPrice,refProdCategory)
+VALUES ('printer','15000','1');
+
+
+-------------------------------------------------------------------------------------------------------------------------
+
+productcategory
+
+
+1)insertproductcategory	-TO insert details into table tblProductCategory
+
+INSERT INTO tblProductCategory (txtCategoryName)
+VALUES ('groceries');
+
+2)duplicatevalidationproductcat-TO validate whether exists a given productcategoryname
+
+	SELECT 
+    id
+FROM
+    tblproductcategory
+WHERE
+    txtCategoryName = 'electronics';
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+editproduct	
+
+1)productselectbyid	-To select all details about a product
+
+SELECT 
+    s.id, s.txtProdName, s.txtProdPrice, c.txtCategoryName
+FROM
+    tblproduct s
+        JOIN
+    tblproductcategory c ON c.id = s.refProdCategory
+WHERE
+    s.refProdCategory = 1;
+	
+	
+---------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+editproduct	
+
+updateproduct
+
+	"UPDATE tblproduct
+SET txtProdName='lux',txtProdPrice='65765'
+WHERE id=1;"
+
+
+
+editproduct
+
+	deleteproduct
+
+	"UPDATE tblproduct
+SET bDeleteFlag = 1
+WHERE id=3;"
+
+
+
+orderlist
+
+	selectordersfromhdr	"select  t.id,u.txtUsername,t.txtOrderNo,t.txtOrderAmount,u.txtAddress,
+u.txtPincode from tblorderhead t join tblusers u on t.refUserName=u.id
+where t.id=1;"
+
+
+orderdetails
+
+	selectorderfromhdrandchild	"select  t.id,t.txtOrderNo,t.txtOrderAmount,u.txtQuantity,u.txtTotalAmount 
+from tblorderhead t join tblorderchild u on t.id=u.refOrderHdr
+where t.id=1;"
+
+
+
+profileedit	
+
+
+
+selectuserbyid	
+
+"select id,refUserType,txtUsername,txtPassword,txtFirstName from tblusers
+where id=1;"
+
+
+
+profileedit	
+
+updateuser
+
+	"UPDATE tblusers
+SET txtUsername = 'hsgdhd',txtPassword='gvghg',txtFirstName='dhdh',
+txtLastName='dndnd',txtAddress='arakuzha',txtStreet='memadangu',txtCity='kochi',
+txtPincode='676676',txtPhoneNo='448758947',txtWebsite='hhfjd.com'
+WHERE id=1;"

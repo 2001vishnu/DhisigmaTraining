@@ -1,0 +1,7 @@
+1)Server Installation
+2)WorkBench Setup
+3)DatabaseCreation
+4)Table Creation
+5)Inserting Values into Tables
+6)Performing Crude operations
+7)preparing JSON codes for all Crude operations
