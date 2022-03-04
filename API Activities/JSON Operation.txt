@@ -72,8 +72,10 @@ Request:-
 }
 
 Response:-
+
 {
   "status": "success"
+  }
 -------------------------------------------------------------------------------------------------
 
 Profile	page-To validate whether there is a user duplicate with given username
@@ -88,7 +90,7 @@ Request:-
 
 Response:-
 {
-  "status": "duplicate exist",
+  "status": "success",
   "values": {
     "id": 4
   }
@@ -224,7 +226,7 @@ Request:-
 
 Response:-
 {
-  "status": "duplicate exist",
+  "status": "success",
   "values": {
     "id": 4
   }
@@ -276,13 +278,12 @@ editproduct page-To a deleteproduct
 
 Request:-
 {
-"task":"deleteproduct",
+  "task": "deleteproduct",
   "values": {
-   "id":1,
-  "bDeleteFlag":1
+    "id": 1,
+    "bDeleteFlag": 1
   }
 }
-
 
 Response:-
 {
@@ -305,12 +306,15 @@ Request:-
 Response:-
 {
   "status": "success",
-  "values":{
-  "id":1,"txtUsername":"vishnu","txtOrderNo":45,"txtOrderAmount":455,"txtAddress":"dsdfsf",
-"txtPincode":35345 
-  
+  "values": {
+    "id": 1,
+    "txtUsername": "vishnu",
+    "txtOrderNo": 45,
+    "txtOrderAmount": 455,
+    "txtAddress": "dsdfsf",
+    "txtPincode": 35345
   }
-  }
+}
 ---------------------------------------------------------------------------------------------------------------------------  
   
  orderlistv page-TO select order details from table tblorderhead and tblorderchild
@@ -327,20 +331,23 @@ Request:-
 Response:-
 {
   "status": "success",
-  "values":{
-  "id":1,"txtOrderNo":2223,"txtOrderAmount:3232,"txtQuantity":8,"txtTotalAmount":747 
-
+  "values": {
+    "id": 1,
+    "txtOrderNo": 2223,
+    "txtOrderAmount": 3232,
+    "txtQuantity": 8,
+    "txtTotalAmount": 747
   }
-  }
+}
 ---------------------------------------------------------------------------------------------------------------------------
   
  profileedit	page- TO select a user by id
   
 Request:-
 {
-"task":"selectuserbyid",
+  "task": "selectuserbyid",
   "values": {
-   "id":1
+    "id": 1
   }
 }
 
@@ -348,23 +355,33 @@ Request:-
 Response:-
 {
   "status": "success",
-  "values":{
-  "id":1,"refUserType":2,"txtUsername":"vishu","txtPassword":"googli","txtFirstName":"vishnu"
-
+  "values": {
+    "id": 1,
+    "refUserType": 2,
+    "txtUsername": "vishu",
+    "txtPassword": "googli",
+    "txtFirstName": "vishnu"
   }
-  }
+}
  ---------------------------------------------------------------------------------------------------------------------------
  
 profileedit	page- TO update user details
   
 Request:-
 {
-"task":"updateuser",
+  "task": "updateuser",
   "values": {
-   "id":1,"txtUsername":"hsgdhd","txtPassword":"gvghg","txtFirstName:"dhdh",
-"txtLastName:"dndnd","txtAddress:"arakuzha","txtStreet:"memadangu","txtCity:"kochi",
-"txtPincode:"676676","txtPhoneNo:"448758947","txtWebsite:"hhfjd.com"
-
+    "id": 1,
+    "txtUsername": "hsgdhd",
+    "txtPassword": "gvghg",
+    "txtFirstName": "dhdh",
+    "txtLastName": "dndnd",
+    "txtAddress": "arakuzha",
+    "txtStreet": "memadangu",
+    "txtCity": "kochi",
+    "txtPincode": "676676",
+    "txtPhoneNo": "448758947",
+    "txtWebsite": "hhfjd.com"
   }
 }
 
