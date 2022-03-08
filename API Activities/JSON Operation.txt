@@ -10,8 +10,17 @@ Response:-
   "status": "success",
   "values": 
   {
-    "id": 1,
-    "productname": "mobile"
+    [{"id": 1,
+    "countryname": "america"},
+	{"id": 2,
+    "countryname": "india"},
+	{"id": 3,
+    "countryname": "china"},
+	{"id": 4,
+    "countryname": "japan"},
+	{"id": 5,
+    "countryname": "ruassia"},
+	
   }
 }
 -------------------------------------------------------------------------------------------------
@@ -20,9 +29,11 @@ Profile	page-For selecting all states from tblState with corresponding countryna
 
 Request:-
 {
-"task":"stateselect"
+  "task": "stateselect",
+  "values": {
+    "countryid": 2
+  }
 }
-
 Response:-
 {
   "status": "success",
@@ -103,8 +114,8 @@ Request:-
 {
 "task":"uservalidation",
   "values": {
-    "txtUsername"= "vishnu",
-	"txtPassword"="googi"
+    "txtUsername": "vishnu",
+	"txtPassword"=:"googi"
   }
 }
 

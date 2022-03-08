@@ -2,7 +2,7 @@
 ----------------------------------------------------------------------------------------------------------------------------------------
 Profile	page-countryselect-For selecting all Countrynames from tblcountry.
 
-select id,txtCountryName from tblcountryname;	
+select id,txtCountryName from tblcountry;	
 ----------------------------------------------------------------------------------------------------------------------------------------
 
 Profile	page-stateselect-For selecting all states from tblState with corresponding countryname	
