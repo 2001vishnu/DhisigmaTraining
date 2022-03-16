@@ -162,3 +162,25 @@ txtLastName='dndnd',txtAddress='arakuzha',txtStreet='memadangu',txtCity='kochi',
 txtPincode='676676',txtPhoneNo='448758947',txtWebsite='hhfjd.com'
 WHERE id=1;
 -------------------------------------------------------------------------------------------------------------------------------------------------
+DAshboard        To get Order summaries
+
+SELECT 
+    a.id,
+    a.txtQuantity,
+    a.txtTotalAmount,
+    b.txtProdName,
+    b.txtProdPrice,
+    c.txtOrderNo,
+    c.txtOrderAmount,
+    c.dtCreatedOn,
+    d.txtUsername
+FROM
+    tblorderchild a
+        JOIN
+    tblproduct b ON b.id = a.refProduct
+        JOIN
+    tblorderhead c ON c.id = a.refOrderHdr
+        JOIN
+    tblusers d ON d.id = c.refUserName;
+
+------------------------------------------------------------------------------------------------------------------------------------------------------

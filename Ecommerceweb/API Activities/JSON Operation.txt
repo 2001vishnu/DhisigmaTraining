@@ -31,7 +31,7 @@ Request:-
 {
   "task": "stateselect",
   "values": {
-    "countryid": 2
+    "refCountryName": 2
   }
 }
 Response:-
@@ -82,11 +82,20 @@ Request:-
   }
 }
 
-Response:-
+Response on success:-
+
 
 {
-  "status": "success"
+  "status": "success",
+  "Insertedid":1
   }
+
+Response on error:-
+
+{
+"status":"error",
+"messsage":" "
+}
 -------------------------------------------------------------------------------------------------
 
 Profile	page-To validate whether there is a user duplicate with given username
