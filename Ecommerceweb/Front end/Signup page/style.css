@@ -1,0 +1,14 @@
+h1,h4{
+
+    text-align:center;
+}
+body{
+    background-color:whitesmoke;
+
+}
+form{
+    font-size:small;
+    padding-left: 200px;
+    padding-right: 200px;
+    margin: 40px;
+}
